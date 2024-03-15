@@ -18,34 +18,34 @@ task('deploy', 'Deploy all contracts')
 
     // Deploy HackathonID
 
-    // const HackathonID = await ethers.getContractFactory('HackathonID')
-    // const hackathonIDArg: [] = []
-    // const hackathonID = await HackathonID.deploy(...hackathonIDArg)
+    const HackathonID = await ethers.getContractFactory('HackathonID')
+    const hackathonIDArg: [] = []
+    const hackathonID = await HackathonID.deploy(...hackathonIDArg)
 
-    // await hackathonID.deployed()
+    await hackathonID.deployed()
 
-    // if (verify) {
-    //   await verifyAddress(hackathonID.address, hackathonIDArg)
-    // }
+    if (verify) {
+      await verifyAddress(hackathonID.address, hackathonIDArg)
+    }
 
-    // console.log('Deployed HackathonID at', hackathonID.address)
-    // setDeploymentProperty(network.name, DeploymentProperty.HackathonID, hackathonID.address)
+    console.log('Deployed HackathonID at', hackathonID.address)
+    setDeploymentProperty(network.name, DeploymentProperty.HackathonID, hackathonID.address)
 
     // Deploy Proof Of Give Contract
 
-    // const ProofOfGive = await ethers.getContractFactory('ProofOfGive')
-    // const proofOfGiveArg: [string] = [hackathonID.address]
-    // const proofOfGive = await ProofOfGive.deploy(...proofOfGiveArg)
+    const ProofOfGive = await ethers.getContractFactory('ProofOfGive')
+    const proofOfGiveArg: [string] = [hackathonID.address]
+    const proofOfGive = await ProofOfGive.deploy(...proofOfGiveArg)
 
-    // await proofOfGive.deployed()
+    await proofOfGive.deployed()
 
-    // if (verify) {
-    //   await verifyAddress(proofOfGive.address, proofOfGiveArg)
-    // }
+    if (verify) {
+      await verifyAddress(proofOfGive.address, proofOfGiveArg)
+    }
 
-    // console.log('Deployed ProofOfGive at', proofOfGive.address)
+    console.log('Deployed ProofOfGive at', proofOfGive.address)
 
-    // setDeploymentProperty(network.name, DeploymentProperty.ProofOfGive, proofOfGive.address)
+    setDeploymentProperty(network.name, DeploymentProperty.ProofOfGive, proofOfGive.address)
 
     // Deploy Chiliz ERC20 Token
 
