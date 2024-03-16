@@ -1,6 +1,7 @@
 import Tiger from '../Svg/Tiger';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Donator() {
     return (
@@ -17,13 +18,13 @@ function Donator() {
             <p className="text-sm text-muted-foreground">
                 Create your first event to collect donation to charities
             </p>
-            <Button
-                size="lg"
-                className="block my-4"
-                href="/organizer"
+            <Link
+                className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10  py-3 text-md"
+                target="_blank"
+                href="/donor/dashboard"
             >
                 Get Started
-            </Button>
+            </Link>
         </div>
     );
 }
