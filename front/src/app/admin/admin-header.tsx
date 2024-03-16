@@ -54,6 +54,8 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
         return <div>Loading...</div>;
     }
 
+    console.log('hackathonId', hackathonId);
+
     const { data, isLoading } = useContractReads({
         contracts: [
             {
@@ -66,12 +68,16 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
 
     console.log('data', data);
 
-    const tokenURI = data[0].result;
-    const base64String = tokenURI.split(',')[1];
-    const jsonString = atob(base64String);
-    const tokenData = JSON.parse(jsonString);
+    // if (data.result === 0) {
+    //     return <div>Loading...</div>;
+    // }
 
-    console.log('tokenData', tokenData.image);
+    // const tokenURI = data[0].result;
+    // const base64String = tokenURI.split(',')[1];
+    // const jsonString = atob(base64String);
+    // const tokenData = JSON.parse(jsonString);
+
+    // console.log('tokenData', tokenData.image);
 
     if (error) {
         return (

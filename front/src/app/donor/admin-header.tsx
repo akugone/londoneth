@@ -59,12 +59,12 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
         ],
     });
 
-    const tokenURI = data[0].result;
-    const base64String = tokenURI.split(',')[1];
-    const jsonString = atob(base64String);
-    const tokenData = JSON.parse(jsonString);
+    // const tokenURI = data[0].result;
+    // const base64String = tokenURI.split(',')[1];
+    // const jsonString = atob(base64String);
+    // const tokenData = JSON.parse(jsonString);
 
-    console.log('tokenData', tokenData.image);
+    // console.log('tokenData', tokenData.image);
 
     if (error) {
         return (
