@@ -2,6 +2,7 @@ import Tiger from '../Svg/Tiger';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import WorldCoinLogin from '../Worldcoin/WorldCoinLogin';
 
 function Donator() {
     return (
@@ -18,13 +19,19 @@ function Donator() {
             <p className="text-sm text-muted-foreground">
                 Make your first donation to a charity
             </p>
-            <Link
-                className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10  py-3 text-md"
-                target="_blank"
-                href="/admin/donations"
-            >
-                Get Started
-            </Link>
+            {process.env.NEXT_PUBLIC_ACTIVATE_WORLDCOIN === 'true' ? (
+                <>
+                    <WorldCoinLogin />
+                </>
+            ) : (
+                <Link
+                    className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10 py-3 text-md"
+                    target="_blank"
+                    href="/admin/donations"
+                >
+                    Get Started
+                </Link>
+            )}
         </div>
     );
 }

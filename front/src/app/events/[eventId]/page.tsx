@@ -6,7 +6,7 @@ import { EventImage } from '@/components/event-image';
 import DonationForm from '@/components/Form/donationForm';
 import Image from 'next/image';
 import WorldCoinLogin from '@/components/Worldcoin/WorldCoinLogin';
-import {DonationGrid} from "@/components/donations-grid";
+import { DonationGrid } from '@/components/donations-grid';
 
 const activityItems = [
     {
@@ -127,11 +127,6 @@ export default function EventPage() {
                                 Dignissim sed eget risus enim. Mattis mauris
                                 semper sed amet vitae sed turpis id. Id dolor
                             </p>
-                            <WorldCoinLogin />
-                            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                Make a donation
-                            </h1>
-                            <DonationForm />
                         </div>
                     </div>
                 </main>
