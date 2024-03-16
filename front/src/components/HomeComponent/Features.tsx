@@ -30,19 +30,18 @@ function Features() {
                             >
                                 <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   ">
                                     <Image
-                                        src="/images/home/features/anony.png"
+                                        src="/images/nouns/star.png"
                                         alt="feature image"
                                         width={80}
                                         height={80}
                                     />
                                 </div>
                                 <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Anonymized Interaction
+                                    Proof Of Give
                                 </h3>
                                 <p className="text-base text-body">
-                                    Speak freely; your identity cloaked in
-                                    anonymity, your queries a secret between you
-                                    and your Genie.
+                                    You get an NFT proof of gift with each
+                                    donation you make.
                                 </p>
                             </div>
                         </div>
