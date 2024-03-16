@@ -15,7 +15,7 @@ function TextPics() {
                                 data-wow-delay=".2s"
                             >
                                 <img
-                                    src="/images/home/about/genie.png"
+                                    src="https://pbs.twimg.com/media/GIvXMdmWoAAoBrZ?format=jpg&name=large"
                                     alt="about image"
                                     className="mx-auto max-w-full"
                                 />
@@ -64,7 +64,7 @@ function TextPics() {
                                     Crafting futur
                                 </h2>
                                 <p className="mb-[30px] text-base leading-relaxed text-body">
-                                    Our team blablablabl
+                                The team behind Swaggi is a passionate crew, dedicated to going the extra mile for a project that promises to enrich the ecosystem. United by a shared vision of sustainability and generosity, they're all in, committed to making a tangible difference by connecting surplus swag with meaningful causes.
                                 </p>
 
                                 <div className="mb-[30px] flex items-center">
@@ -76,7 +76,8 @@ function TextPics() {
                                             Martin
                                         </h5>
                                         <p className="text-base text-body">
-                                            Mart is blablbala
+                                        Imagine Martin, the swag wizard behind Swaggi, who looked at a pile of leftover hackathon merch and saw not clutter, but opportunity. With a vision as bold as his code, he's on a mission to funnel forgotten hoodies and tees from tech closets to charitable causes, one T-shirt cannon at a time. 
+
                                         </p>
                                     </div>
                                 </div>
@@ -90,7 +91,7 @@ function TextPics() {
                                             Tom
                                         </h5>
                                         <p className="text-base text-body">
-                                            Tom is blablbala
+                                        Tom is the steadfast co-pilot of Swaggi, skillfully backing Martin to turn the dream of redistributing hackathon swag into reality. He's the quiet force ensuring the project's smooth sailing.
                                         </p>
                                     </div>
                                 </div>
