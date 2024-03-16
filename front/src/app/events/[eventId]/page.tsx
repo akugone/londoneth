@@ -130,6 +130,9 @@ export default function EventPage() {
                                 semper sed amet vitae sed turpis id. Id dolor
                             </p>
                             <WorldCoinLogin />
+                            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                Make a donation
+                            </h1>
                             <DonationForm />
                         </div>
                     </div>
