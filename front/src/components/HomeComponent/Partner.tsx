@@ -61,21 +61,20 @@ function Partners() {
                             >
                                 <figure className="mx-auto flex items-center justify-center w-20 h-20 rounded-full p-4 bg-yellow-gradient-color text-black">
                                     <Image
-                                        src="/images/home/logos/worldcoin.png"
+                                        src="/images/chiliz.png"
                                         alt="author"
                                         className="h-full w-full object-contain"
-                                        width={90}
-                                        height={90}
+                                        width={100}
+                                        height={100}
                                     />
                                 </figure>
 
                                 <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    The Graph
+                                    Chiliz
                                 </h3>
                                 <p className="text-base text-body">
-                                    The Graph is an indexing protocol for
-                                    organizing blockchain data and making it
-                                    easily accessible with GraphQL
+                                Chiliz, founded in 2018, is a blockchain provider 
+                                focused on the sports and entertainment industry.
                                 </p>
                             </div>
                         </div>
@@ -87,7 +86,7 @@ function Partners() {
                             >
                                 <figure className="mx-auto flex items-center justify-center w-20 h-20 rounded-full p-4 bg-yellow-gradient-color text-black">
                                     <Image
-                                        src="/images/home/logos/push.png"
+                                        src="/images/nouns.jpeg"
                                         alt="author"
                                         className="h-full w-full object-contain"
                                         width={120}
@@ -97,13 +96,12 @@ function Partners() {
 
                                 {/*</div>*/}
                                 <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    PUSH
+                                    Nouns DAO
                                 </h3>
                                 <p className="text-base text-body">
-                                    Push is the missing piece of Web3 | Push
-                                    Protocol is a web3 communication network,
-                                    enabling cross-chain notifications and
-                                    messaging for dapps.
+                                Nouns DAO is an NFT governed decentralised 
+                                autonomous organisation. But it's also an open source brand, 
+                                a funding body, a community, and many more things.
                                 </p>
                             </div>
                         </div>
