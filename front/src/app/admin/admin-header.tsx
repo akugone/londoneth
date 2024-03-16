@@ -64,12 +64,12 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
         ],
     });
 
-    const tokenURI = data[0].result;
-    const base64String = tokenURI.split(',')[1];
-    const jsonString = atob(base64String);
-    const tokenData = JSON.parse(jsonString);
+    // const tokenURI = data[0].result;
+    // const base64String = tokenURI.split(',')[1];
+    // const jsonString = atob(base64String);
+    // const tokenData = JSON.parse(jsonString);
 
-    console.log('tokenData', tokenData.image);
+    // console.log('tokenData', tokenData.image);
 
     if (error) {
         return (
@@ -382,6 +382,7 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                                 </div>
                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNzIwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9Ii0yMDAgLTUwIDEwMDAgMTAwMCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI2NC41IDE5MC41YzAtMTMuOCAxMS4yLTI1IDI1LTI1SDU2OGMxMy44IDAgMjUgMTEuMiAyNSAyNXY0OTBjMCAxMy44LTExLjIgMjUtMjUgMjVIMjg5LjVjLTEzLjggMC0yNS0xMS4yLTI1LTI1eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNjUgNjI0YzAtMTMuOCAxMS4yLTI1IDI1LTI1aDU0M2MxMy44IDAgMjUgMTEuMiAyNSAyNXY1Ni41YzAgMTMuOC0xMS4yIDI1LTI1IDI1SDI5MGMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTAgMTkwLjVjMC0xMy44IDExLjItMjUgMjUtMjVoNTQzYzEzLjggMCAyNSAxMS4yIDI1IDI1VjI0N2MwIDEzLjgtMTEuMiAyNS0yNSAyNUgyNWMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PC9zdmc+PHRleHQgeD0iMzAiIHk9IjY3MCIgc3R5bGU9ImZvbnQ6IDYwcHggc2Fucy1zZXJpZjtmaWxsOiNmZmYiPmV0aGdsb2JhbC5mdW5kPC90ZXh0Pjwvc3ZnPg==" />
                             </li>
+
                             <li>
                                 <YellowSun />
                             </li>

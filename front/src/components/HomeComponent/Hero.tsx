@@ -19,14 +19,19 @@ function Hero() {
                             height={100}
                             alt="hero"
                         />
-                        <h1 className="mb-6 text-3xl font-bold  text-center leading-tight text-black sm:text-[40px] md:text-[50px] lg:text-[42px] xl:text-[50px]">
-                            <span className="bg-yellow-gradient-color bg-clip-text  mx-2">
-                                Connect charities
+                        <h1 className="mb-6 text-4xl font-bold  text-center leading-tight text-black sm:text-[40px] md:text-[50px] lg:text-[42px] xl:text-[50px]">
+                            <span className="bg-yellow-gradient-color bg-clip-text tracking-widest mx-2">
+                                <span className="text-yellow-300 ">S</span>uper{' '}
+                                <span className="text-yellow-300 ">W</span>e{' '}
+                                <span className="text-yellow-300 ">A</span>ll{' '}
                             </span>{' '}
-                            with Hackathon organizers
+                            <span className="text-yellow-300 ">G</span>onna{' '}
+                            <span className="text-yellow-300 ">G</span>ive{' '}
+                            <span className="text-yellow-300 ">I</span>t
                         </h1>
-                        <p className="text-3xl mb-10 max-w-[475px] leading-relaxed text-body">
-                            to collect swagg or token donations
+                        <p className="text-3xl text-center mb-10 max-w-[475px] leading-relaxed text-body">
+                            Connect charities with Hackathon organizers and
+                            collect swagg or token donations
                         </p>
 
                         <div className="flex justify-between">

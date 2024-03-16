@@ -53,19 +53,18 @@ function Features() {
                             >
                                 <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   ">
                                     <Image
-                                        src="/images/home/features/encrypt.png"
+                                        src="/images/nouns/glove.png"
                                         alt="feature image"
                                         width={80}
                                         height={80}
                                     />
                                 </div>
                                 <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Encrypted Data Sharing
+                                    Project Due Diligence
                                 </h3>
                                 <p className="text-base text-body">
-                                    Upload your data with confidence; iExec's
-                                    DataProtector weaves a spell of encryption
-                                    around your documents.
+                                    Our commun city make a proper due diligence
+                                    before accepting a nex organization
                                 </p>
                             </div>
                         </div>
@@ -77,93 +76,18 @@ function Features() {
                             >
                                 <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   ">
                                     <Image
-                                        src="/images/home/features/pay.png"
+                                        src="/images/nouns/three.png"
                                         alt="feature image"
                                         width={80}
                                         height={80}
                                     />
                                 </div>
                                 <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Pay-per-Wish Pricing
+                                    Help local charities
                                 </h3>
                                 <p className="text-base text-body">
-                                    Unlock expert knowledge with a simple, small
-                                    fee. Affordable wisdom at your command
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-                            <div
-                                className="wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center"
-                                data-wow-delay=".2s"
-                            >
-                                <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white ">
-                                    <Image
-                                        src="/images/home/features/spectrum.png"
-                                        alt="feature image"
-                                        width={90}
-                                        height={90}
-                                    />
-                                </div>
-                                <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Spectrum of Expertise
-                                </h3>
-                                <p className="text-base text-body">
-                                    Choose from a diverse ensemble of Genies,
-                                    from a Legal Luminary, a Health Herald, or a
-                                    Fiscal Sage, your specialized Genie is at
-                                    your service.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-                            <div
-                                className="wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center"
-                                data-wow-delay=".3s"
-                            >
-                                <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   ">
-                                    <Image
-                                        src="/images/home/features/ring.png"
-                                        alt="feature image"
-                                        width={90}
-                                        height={90}
-                                    />
-                                </div>
-                                <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Be notify
-                                </h3>
-                                <p className="text-base text-body">
-                                    As soon as our Genies have completed their
-                                    analysis, you will be notified
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="w-full px-4 md:w-1/2 lg:w-1/3 relative">
-                            <div
-                                className="wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center"
-                                data-wow-delay=".4s"
-                            >
-                                <div className="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-yellow-gradient-color text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   ">
-                                    <Image
-                                        src="/images/home/features/reputation.png"
-                                        alt="feature image"
-                                        width={90}
-                                        height={90}
-                                    />
-                                </div>
-                                <h3 className="mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]">
-                                    Reputation
-                                </h3>
-                                {/* <div className='absolute top-[-5px] right-[40px] md:right-[100px] p-2 bg-redpraha text-black text-xs rounded-md'>
-                      Coming Soon
-                    </div> */}
-                                <p className="text-base text-body">
-                                    Each Genie’s reputation is based on the
-                                    quality of their analysis, ensuring the
-                                    highest standards of service.
+                                    Make an impact in city where you organize
+                                    your hackathon
                                 </p>
                             </div>
                         </div>
