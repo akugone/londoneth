@@ -1,4 +1,9 @@
-import { useAccount, useContractRead, useContractReads } from 'wagmi';
+import {
+    useAccount,
+    useContractRead,
+    useContractReads,
+    useContractWrite,
+} from 'wagmi';
 import { abi } from '@/abis/HackathonID';
 import { BaseError } from 'viem';
 import React, { Fragment, useState } from 'react';
@@ -14,8 +19,9 @@ import { wagmiContractConfig } from '@/config/wagmiConfig';
 import { useHackathon } from '@/hooks/useHackathon';
 import Image from 'next/image';
 import YellowSun from '@/components/Svg/YellowSun';
-import AdminMenu from "@/app/admin/admin-menu.";
-import {Address} from "@/types/address";
+import AdminMenu from '@/app/admin/admin-menu.';
+import { Address } from '@/types/address';
+import { Button } from '@/components/ui/button';
 
 const navigation = [
     {
@@ -42,6 +48,22 @@ interface Props {
 
 export default function DonationsHeader({ address, organization }: Props) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    const {
+        data: hash,
+        isLoading,
+        writeAsync,
+    } = useContractWrite({
+        ...wagmiContractConfig,
+        functionName: 'createEvent',
+    });
+
+    async function onSubmit() {
+        const res = await writeAsync({
+            args: [BigInt(1), 'hello', `cid:${'hello'}`],
+        });
+        console.log({ res });
+    }
 
     return (
         <header>
@@ -222,6 +244,22 @@ export default function DonationsHeader({ address, organization }: Props) {
                                     Your NFT
                                 </div>
                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNzIwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9Ii0yMDAgLTUwIDEwMDAgMTAwMCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI2NC41IDE5MC41YzAtMTMuOCAxMS4yLTI1IDI1LTI1SDU2OGMxMy44IDAgMjUgMTEuMiAyNSAyNXY0OTBjMCAxMy44LTExLjIgMjUtMjUgMjVIMjg5LjVjLTEzLjggMC0yNS0xMS4yLTI1LTI1eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNjUgNjI0YzAtMTMuOCAxMS4yLTI1IDI1LTI1aDU0M2MxMy44IDAgMjUgMTEuMiAyNSAyNXY1Ni41YzAgMTMuOC0xMS4yIDI1LTI1IDI1SDI5MGMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTAgMTkwLjVjMC0xMy44IDExLjItMjUgMjUtMjVoNTQzYzEzLjggMCAyNSAxMS4yIDI1IDI1VjI0N2MwIDEzLjgtMTEuMiAyNS0yNSAyNUgyNWMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PC9zdmc+PHRleHQgeD0iMzAiIHk9IjY3MCIgc3R5bGU9ImZvbnQ6IDYwcHggc2Fucy1zZXJpZjtmaWxsOiNmZmYiPmV0aGdsb2JhbC5mdW5kPC90ZXh0Pjwvc3ZnPg==" />
+                            </li>
+                            <li>
+                                <div className="text-xl mb-4 font-semibold leading-6 text-gray-400">
+                                    Your have{' '}
+                                    <span className="text-green-300">
+                                        {' '}
+                                        6.8{' '}
+                                    </span>
+                                    PoG Tokens
+                                </div>
+                                <Button
+                                    onClick={() => onSubmit()}
+                                    className=" p-1.5"
+                                >
+                                    Claim your PoG Token
+                                </Button>
                             </li>
 
                             <li>
