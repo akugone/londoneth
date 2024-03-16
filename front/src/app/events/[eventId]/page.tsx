@@ -6,6 +6,8 @@ import { EventImage } from '@/components/event-image';
 import { Button } from '@/components/ui/button';
 import { DonationList } from '@/components/donations-list';
 import DonationForm from '@/components/Form/donationForm';
+import Image from 'next/image';
+import PixelBackground from '@/components/Svg/PixelBackground';
 
 const activityItems = [
     {
@@ -97,9 +99,16 @@ export default function EventPage() {
                 </aside>
 
                 <main className="sticky top-8 flex-1 shrink-0 xl:block px-8 py-12">
+                    <Image
+                        src="/images/nouns/diamond.png"
+                        width={100}
+                        height={100}
+                        alt="hero"
+                    />
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                         Organizer : {event.name}
                     </h2>
+
                     <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
                         <div className="lg:w-full lg:max-w-2xl lg:flex-auto flex flex-col items-start gap-10">
                             <p className="text-xl leading-8 text-gray-600">

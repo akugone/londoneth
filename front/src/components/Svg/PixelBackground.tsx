@@ -1,7 +1,7 @@
 function PixelBackground() {
     return (
         <svg
-            className="absolute h-full w-full object-cover top-0 left-0 z-[-1] text-gray-100 scale-[3.18]"
+            className="absolute h-full w-full object-cover top-0 left-0 z-[-100] text-gray-100 scale-[3.18]"
             width="80"
             height="80"
             viewBox="0 0 80 80"
