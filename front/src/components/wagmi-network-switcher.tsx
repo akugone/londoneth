@@ -29,7 +29,7 @@ export const WagmiNetworkSwitcher = () => {
     return (
         <>
             {activeChain?.unsupported ? (
-                <p>Wrong network detected, switch or disconnect to continue.</p>
+                <p>Chilliz_Spicy</p>
             ) : (
                 <UI.DropdownMenu>
                     <UI.DropdownMenuTrigger asChild>
