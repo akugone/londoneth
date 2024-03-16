@@ -1,11 +1,12 @@
 {
-  "sepolia": {
+  "chiliz_spicy": {
     "HackathonID": {
-      "address": "0x9271De5df28708D2c7C5d8954293228b68234F7a",
-      "startBlock": 5468977
+      "address": "0xA24bD33d771D21Ca5fab9c6006eFEB335E6c8dD5",
+      "startBlock": 12359409
     },
     "ProofOfGive": {
-      "address": "0x4169495E9dE1334621b5F83dc98eA6F2d23c4471"
+      "address": "0x0c94f5205786845c209CBb6511ccccb0dA12def0",
+      "startBlock": 12359420
     }
   }
 }

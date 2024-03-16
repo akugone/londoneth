@@ -46,7 +46,11 @@ const config: HardhatUserConfig = {
       accounts,
       chainId: 80001,
     },
-    routescan: {
+    // routescan: {
+    //   url: 'https://spicy-rpc.chiliz.com',
+    //   accounts,
+    // },
+    chiliz_spicy: {
       url: 'https://spicy-rpc.chiliz.com',
       accounts,
     },
@@ -95,6 +99,14 @@ const config: HardhatUserConfig = {
         },
       },
       {
+        network: 'chiliz_spicy',
+        chainId: 88882,
+        urls: {
+          apiURL: 'https://api.routescan.io/v2/network/testnet/evm/88882/etherscan',
+          browserURL: 'https://testnet.chiliscan.com',
+        },
+      },
+      {
         network: 'routescan',
         chainId: 1,
         urls: {
@@ -105,6 +117,7 @@ const config: HardhatUserConfig = {
     ],
     apiKey: {
       routescan: 'routescan',
+      chiliz_spicy: 'chiliz_spicy',
       polygonMumbai: process.env.POLYGONSCAN_API_KEY || '',
       polygon: process.env.POLYGONSCAN_API_KEY || '',
       sepolia: process.env.SEPOLIA_API_KEY || '',

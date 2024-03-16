@@ -1,12 +1,14 @@
 # Polygon Secret
 
-```
-npm install
-Complete the .env file (choose your network and add your Mnemonic and Infura key)
-Check make commands
-- make deploy
-- make deploy-verify
-Find you deployed contract address in the in the .deployed folder
-```
+# Chiliz Deployement
 
-s
+https://testnet.chiliscan.com/address/0xA24bD33d771D21Ca5fab9c6006eFEB335E6c8dD5#code
+Deployed HackathonID at 0xA24bD33d771D21Ca5fab9c6006eFEB335E6c8dD5
+Verifying contract at 0x0c94f5205786845c209CBb6511ccccb0dA12def0
+
+https://testnet.chiliscan.com/address/0x0c94f5205786845c209CBb6511ccccb0dA12def0#code
+Deployed ProofOfGive at 0x0c94f5205786845c209CBb6511ccccb0dA12def0
+Verifying contract at 0x326DCfc44Ef05894E81AB85B9ac312488859D8f1
+
+https://testnet.chiliscan.com/address/0x326DCfc44Ef05894E81AB85B9ac312488859D8f1#code
+Deployed PoG Token at 0x326DCfc44Ef05894E81AB85B9ac312488859D8f1

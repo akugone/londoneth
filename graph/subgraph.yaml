@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: HackathonID
-    network: sepolia
+    network: chiliz_spicy
     source:
-      address: "0x9271De5df28708D2c7C5d8954293228b68234F7a"
+      address: "0xA24bD33d771D21Ca5fab9c6006eFEB335E6c8dD5"
       abi: HackathonID
-      startBlock: 5468977
+      startBlock: 12359409
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -53,11 +53,11 @@ dataSources:
       file: ./src/hackathon-id.ts
   - kind: ethereum
     name: ProofOfGive
-    network: sepolia
+    network: chiliz_spicy
     source:
-      address: "0x4169495E9dE1334621b5F83dc98eA6F2d23c4471"
+      address: "0x0c94f5205786845c209CBb6511ccccb0dA12def0"
       abi: ProofOfGive
-      startBlock: 5468981
+      startBlock: 12359420
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
