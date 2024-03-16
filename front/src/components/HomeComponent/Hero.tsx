@@ -31,8 +31,8 @@ function Hero() {
                     </h1>
                     <p className="text-3xl text-center mb-10 max-w-[700px] leading-relaxed text-body">
                         Swaggy ensures your event makes a positive impact by
-                        saving swag and food for local charities. <br /> Don't
-                        waste, be the best
+                        saving swag and food for local charities. <br />{' '}
+                        Don&apos;t waste, be the best
                     </p>
 
                     <div className="flex gap-20 justify-between">
