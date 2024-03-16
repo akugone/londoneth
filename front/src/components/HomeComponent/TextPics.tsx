@@ -58,7 +58,7 @@ function TextPics() {
                                 data-wow-delay=".3s"
                             >
                                 <span className="mb-4 block text-lg font-medium text-redpraha md:text-[22px]">
-                                    Builder Team
+                                Swaggi Team
                                 </span>
                                 <h2 className="mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight">
                                     Crafting futur
