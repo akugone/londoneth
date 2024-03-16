@@ -1,24 +1,19 @@
 'use client';
 
 import { WagmiConfig, createConfig, configureChains } from 'wagmi';
-import { mainnet, sepolia } from 'wagmi/chains';
-import {PropsWithChildren, useEffect, useState} from 'react';
-import { publicProvider } from 'wagmi/providers/public'
+import { chiliz, mainnet, sepolia } from 'wagmi/chains';
+import { PropsWithChildren, useEffect, useState } from 'react';
+import { publicProvider } from 'wagmi/providers/public';
 import { MetaMaskConnector } from '@wagmi/connectors/metaMask';
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [
-        mainnet,
-        sepolia,
-    ],
+    [mainnet, sepolia, chiliz],
     [publicProvider()]
 );
 
 const config = createConfig({
     autoConnect: true,
-    connectors: [
-        new MetaMaskConnector({ chains }),
-    ],
+    connectors: [new MetaMaskConnector({ chains })],
     publicClient,
     webSocketPublicClient,
 });

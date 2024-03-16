@@ -334,9 +334,21 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
 
                             <li>
                                 <div className="text-xl mb-4 font-semibold leading-6 text-gray-400">
-                                    Your NFT
+                                    You have made 3 Donations
                                 </div>
                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNzIwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9Ii0yMDAgLTUwIDEwMDAgMTAwMCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI2NC41IDE5MC41YzAtMTMuOCAxMS4yLTI1IDI1LTI1SDU2OGMxMy44IDAgMjUgMTEuMiAyNSAyNXY0OTBjMCAxMy44LTExLjIgMjUtMjUgMjVIMjg5LjVjLTEzLjggMC0yNS0xMS4yLTI1LTI1eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNjUgNjI0YzAtMTMuOCAxMS4yLTI1IDI1LTI1aDU0M2MxMy44IDAgMjUgMTEuMiAyNSAyNXY1Ni41YzAgMTMuOC0xMS4yIDI1LTI1IDI1SDI5MGMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTAgMTkwLjVjMC0xMy44IDExLjItMjUgMjUtMjVoNTQzYzEzLjggMCAyNSAxMS4yIDI1IDI1VjI0N2MwIDEzLjgtMTEuMiAyNS0yNSAyNUgyNWMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PC9zdmc+PHRleHQgeD0iMzAiIHk9IjY3MCIgc3R5bGU9ImZvbnQ6IDYwcHggc2Fucy1zZXJpZjtmaWxsOiNmZmYiPmV0aGdsb2JhbC5mdW5kPC90ZXh0Pjwvc3ZnPg==" />
+                            </li>
+                            <li>
+                                <div className="text-xl mb-4 font-semibold leading-6 text-gray-400">
+                                    You have 6.8 PoG Token to claim
+                                </div>
+                                <Link
+                                    className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10  py-3 text-md"
+                                    target="_blank"
+                                    href="/admin/events"
+                                >
+                                    Claim my token
+                                </Link>
                             </li>
                             <li>
                                 <Tiger />

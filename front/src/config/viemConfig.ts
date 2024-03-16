@@ -1,5 +1,5 @@
 import { createPublicClient, createWalletClient, custom } from 'viem';
-import { mainnet } from 'viem/chains';
+import { mainnet, chiliz } from 'viem/chains';
 
 export const publicClient = createPublicClient({
     chain: mainnet,
