@@ -20,7 +20,6 @@ import { useHackathon } from "@/hooks/useHackathon"
 import { useContractWrite, useWaitForTransaction } from 'wagmi';
 import ModalCreatedEvent from "@/components/modal-created-event";
 import { useState} from "react";
-import {Address} from "@/types/address";
 
 const formSchema = z.object({
     title: z.string().min(2, {
@@ -29,13 +28,12 @@ const formSchema = z.object({
 })
 
 export function CreateEventForm() {
+    // const {address} = useAccount()
     const [isOpen, setOpen] = useState(false)
-    const { data, isLoading, writeAsync } = useContractWrite({
+    const { data: hash, isLoading, writeAsync } = useContractWrite({
         ...wagmiContractConfig,
         functionName: 'createEvent',
     });
-
-    const hash = data as Address;
 
     const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransaction({
         hash: hash,

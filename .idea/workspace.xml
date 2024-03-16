@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11fdcbb2-420e-4b7f-91b5-b8274743a312" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/app/admin/events/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/admin-aside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/events-aside.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/admin-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/events-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/events/[eventId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/[eventId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/events/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/donor/admin-aside.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/donor/admin-header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/donor/dashboard/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/donor/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/events/[eventId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/events/[eventId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/wait/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/wait/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HomeComponent/Donator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HomeComponent/Donator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HomeComponent/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HomeComponent/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HomeComponent/HomeMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HomeComponent/HomeMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HomeComponent/Partner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HomeComponent/Partner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HomeComponent/TextPics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HomeComponent/TextPics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/NoNFT.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/NoNFT.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/admin/events/events-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/events-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/create-event-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create-event-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/donations-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/donations-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/events-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/events-grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/wagmi-connect-wallet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/wagmi-connect-wallet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/config/wagmiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/config/wagmiConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/hooks/useCopyToClipboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/hooks/useCopyToClipboard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/hooks/useDonation.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/hooks/useSubgraph.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/hooks/useSubgraph.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/hooks/useSubgraphProofOfGive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/hooks/useSubgraphProofOfGive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710584976189</updated>
       <workItem from="1710584978045" duration="2658000" />
-      <workItem from="1710597364681" duration="5525000" />
+      <workItem from="1710597364681" duration="6678000" />
     </task>
     <servers />
   </component>
