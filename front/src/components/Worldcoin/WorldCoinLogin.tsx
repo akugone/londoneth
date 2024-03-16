@@ -36,7 +36,7 @@ export default function WorldCoinLogin() {
                                     // signIn() // when there are multiple providers
                                 }}
                             >
-                                Sign in
+                                Sign in with Worldcoin
                             </a>
                         </>
                     )}

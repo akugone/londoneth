@@ -8,6 +8,7 @@ import { DonationList } from '@/components/donations-list';
 import DonationForm from '@/components/Form/donationForm';
 import Image from 'next/image';
 import PixelBackground from '@/components/Svg/PixelBackground';
+import WorldCoinLogin from '@/components/Worldcoin/WorldCoinLogin';
 
 const activityItems = [
     {
@@ -128,6 +129,7 @@ export default function EventPage() {
                                 Dignissim sed eget risus enim. Mattis mauris
                                 semper sed amet vitae sed turpis id. Id dolor
                             </p>
+                            <WorldCoinLogin />
                             <DonationForm />
                         </div>
                     </div>
