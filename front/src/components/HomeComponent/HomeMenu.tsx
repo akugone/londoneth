@@ -55,40 +55,56 @@ function HomeMenu() {
                         <nav className="fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center bg-white bg-opacity-95 text-center backdrop-blur-sm lg:static lg:h-auto lg:w-max lg:bg-transparent lg:backdrop-blur-none ">
                             <ul className="items-center space-y-3 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-10">
                                 <li className="menu-item">
-                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                    <Button
+                                        asChild
+                                        variant="link"
+                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
+                                    >
                                         <Link
                                             onClick={() => setIsOpen(false)}
-                                            href="#features"
+                                            href="#donations"
                                         >
                                             Donations
                                         </Link>
                                     </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                    <Button
+                                        asChild
+                                        variant="link"
+                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
+                                    >
                                         <Link
                                             onClick={() => setIsOpen(false)}
-                                            href="#about"
+                                            href="#events"
                                         >
                                             Events
                                         </Link>
                                     </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                    <Button
+                                        asChild
+                                        variant="link"
+                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
+                                    >
                                         <Link
                                             onClick={() => setIsOpen(false)}
-                                            href="#work-process"
+                                            href="#features"
                                         >
                                             Features
                                         </Link>
                                     </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                    <Button
+                                        asChild
+                                        variant="link"
+                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
+                                    >
                                         <Link
                                             onClick={() => setIsOpen(false)}
-                                            href="#faq"
+                                            href="#team"
                                         >
                                             Team
                                         </Link>

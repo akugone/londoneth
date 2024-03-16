@@ -3,7 +3,7 @@ import Image from 'next/image';
 function TextPics() {
     return (
         <section
-            id="about"
+            id="team"
             className="relative pt-[100px] pb-[50px] "
         >
             <div className="container lg:max-w-[1120px]">
@@ -58,13 +58,20 @@ function TextPics() {
                                 data-wow-delay=".3s"
                             >
                                 <span className="mb-4 block text-lg font-medium text-redpraha md:text-[22px]">
-                                Swaggi Team
+                                    Swaggi Team
                                 </span>
                                 <h2 className="mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight">
                                     Crafting futur
                                 </h2>
                                 <p className="mb-[30px] text-base leading-relaxed text-body">
-                                The team behind Swaggi is a passionate crew, dedicated to going the extra mile for a project that promises to enrich the ecosystem. United by a shared vision of sustainability and generosity, they&apos;re all in, committed to making a tangible difference by connecting surplus swag with meaningful causes.
+                                    The team behind Swaggi is a passionate crew,
+                                    dedicated to going the extra mile for a
+                                    project that promises to enrich the
+                                    ecosystem. United by a shared vision of
+                                    sustainability and generosity, they&apos;re
+                                    all in, committed to making a tangible
+                                    difference by connecting surplus swag with
+                                    meaningful causes.
                                 </p>
 
                                 <div className="mb-[30px] flex items-center">
@@ -76,8 +83,15 @@ function TextPics() {
                                             Martin
                                         </h5>
                                         <p className="text-base text-body">
-                                        Imagine Martin, the swag wizard behind Swaggi, who looked at a pile of leftover hackathon merch and saw not clutter, but opportunity. With a vision as bold as his code, he&apos;s on a mission to funnel forgotten hoodies and tees from tech closets to charitable causes, one T-shirt cannon at a time.
-
+                                            Imagine Martin, the swag wizard
+                                            behind Swaggi, who looked at a pile
+                                            of leftover hackathon merch and saw
+                                            not clutter, but opportunity. With a
+                                            vision as bold as his code,
+                                            he&apos;s on a mission to funnel
+                                            forgotten hoodies and tees from tech
+                                            closets to charitable causes, one
+                                            T-shirt cannon at a time.
                                         </p>
                                     </div>
                                 </div>
@@ -91,7 +105,12 @@ function TextPics() {
                                             Tom
                                         </h5>
                                         <p className="text-base text-body">
-                                        Tom is the steadfast co-pilot of Swaggi, skillfully backing Martin to turn the dream of redistributing hackathon swag into reality. He&apos;s the quiet force ensuring the project&apos;s smooth sailing.
+                                            Tom is the steadfast co-pilot of
+                                            Swaggi, skillfully backing Martin to
+                                            turn the dream of redistributing
+                                            hackathon swag into reality.
+                                            He&apos;s the quiet force ensuring
+                                            the project&apos;s smooth sailing.
                                         </p>
                                     </div>
                                 </div>
