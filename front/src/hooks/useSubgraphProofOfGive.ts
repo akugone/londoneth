@@ -7,23 +7,24 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 })
 
-const selectAllProofOfGiveQuery = `
-  query {
-      pogMinteds {
-        userAddress
-        transactionHash
-        id
-        handle
-        hackathonId
-        eventId
-        donationId
-        dataUri
-        charityId
+export function useSubgraphProofOfGive(address) {
+    const conditions = address ? `(where: { userAddress:"${address}" })` : ''
+    const selectAllProofOfGiveQuery = `
+      {
+          pogMinteds {
+            userAddress
+            transactionHash
+            id
+            handle
+            hackathonId
+            eventId
+            donationId
+            dataUri
+            charityId
+          }
       }
-  }
-`
+    `
 
-export function useSubgraphProofOfGive() {
     const { data, loading, error } = useSubgraph(selectAllProofOfGiveQuery);
 
     const minteds = data?.pogMinteds || []

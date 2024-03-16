@@ -21,7 +21,7 @@ function Donator() {
             <Link
                 className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10  py-3 text-md"
                 target="_blank"
-                href="/donor/dashboard"
+                href="/admin/donations"
             >
                 Get Started
             </Link>

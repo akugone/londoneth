@@ -48,7 +48,7 @@ function Partners() {
                                     WorldCoin
                                 </h3>
                                 <p className="text-base text-body">
-                                    Worldcoin is designed to become the world's
+                                    Worldcoin is designed to become the world&apos;s
                                     largest digital identity and financial
                                     network, giving ownership to everyone.
                                 </p>
@@ -73,7 +73,7 @@ function Partners() {
                                     Chiliz
                                 </h3>
                                 <p className="text-base text-body">
-                                Chiliz, founded in 2018, is a blockchain provider 
+                                Chiliz, founded in 2018, is a blockchain provider
                                 focused on the sports and entertainment industry.
                                 </p>
                             </div>
@@ -99,8 +99,8 @@ function Partners() {
                                     Nouns DAO
                                 </h3>
                                 <p className="text-base text-body">
-                                Nouns DAO is an NFT governed decentralised 
-                                autonomous organisation. But it's also an open source brand, 
+                                Nouns DAO is an NFT governed decentralised
+                                autonomous organisation. But it&apos;s also an open source brand,
                                 a funding body, a community, and many more things.
                                 </p>
                             </div>

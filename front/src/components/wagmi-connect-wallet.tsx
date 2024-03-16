@@ -20,7 +20,7 @@ export const WagmiConnectWallet = ({className}: Props) => {
     return (
         <UI.AlertDialog>
             <UI.AlertDialogTrigger asChild>
-                <UI.Button className={className} variant="link">Connect wallet</UI.Button>
+                <UI.Button className={className}>Connect wallet</UI.Button>
             </UI.AlertDialogTrigger>
             <UI.AlertDialogContent>
                 <UI.AlertDialogHeader>

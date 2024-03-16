@@ -14,6 +14,7 @@ import { wagmiContractConfig } from '@/config/wagmiConfig';
 import { useHackathon } from '@/hooks/useHackathon';
 import Image from 'next/image';
 import YellowSun from '@/components/Svg/YellowSun';
+import {Address} from "@/types/address";
 
 const navigation = [
     {
@@ -36,35 +37,30 @@ const teams = [
 ];
 
 interface Props {
-    isPending: boolean;
-    error: any;
+    address: Address;
     organization: {
         name: string;
         image: string;
     };
 }
 
-export default function AdminHeader({ isPending, error, organization }: Props) {
+export default function EventsHeader({ address, organization }: Props) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const pathname = usePathname();
-    const { address } = useAccount();
     const { hackathonId } = useHackathon();
 
-    if (!address) {
-        return <div>Loading...</div>;
-    }
-
-    console.log('hackathonId', hackathonId);
-
-    const { data, isLoading } = useContractReads({
+    const { data } = useContractReads({
         contracts: [
             {
                 ...wagmiContractConfig,
                 functionName: 'tokenURI',
-                args: [hackathonId],
+                args: [BigInt(hackathonId)],
             },
         ],
     });
+
+    console.log('hackathonId', hackathonId);
+
 
     console.log('data', data);
 
@@ -78,18 +74,6 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
     // const tokenData = JSON.parse(jsonString);
 
     // console.log('tokenData', tokenData.image);
-
-    if (error) {
-        return (
-            <main className="lg:pl-72">
-                <div className="p-12">
-                    {error instanceof BaseError
-                        ? error.message
-                        : 'An error occurred'}
-                </div>
-            </main>
-        );
-    }
 
     return (
         <header>
@@ -162,15 +146,6 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                                             <Logo className="h-6 w-auto" />
                                         </Link>
                                     </div>
-                                    {isPending && (
-                                        <div className="flex items-center gap-x-2 text-sm font-semibold leading-6 text-gray-400">
-                                            <Svg.Refresh
-                                                className="h-5 w-5 animate-spin"
-                                                aria-hidden="true"
-                                            />
-                                            Loading...
-                                        </div>
-                                    )}
                                     {organization && (
                                         <Avatar className="h-12 w-12 flex-none rounded-full bg-gray-50">
                                             <AvatarImage
@@ -297,15 +272,6 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                             <Logo className="h-6 w-auto" />
                         </Link>
                     </div>
-                    {isPending && (
-                        <div className="flex items-center gap-x-2 text-sm font-semibold leading-6 text-gray-400">
-                            <Svg.Refresh
-                                className="h-5 w-5 animate-spin"
-                                aria-hidden="true"
-                            />
-                            Loading...
-                        </div>
-                    )}
                     <nav className="flex flex-1 flex-col">
                         <ul
                             role="list"
@@ -397,7 +363,7 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                             {!!address && (
                                 <li className="-mx-6 mt-auto">
                                     <a
-                                        href="#"
+                                        href="front/src/app/admin#"
                                         className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                                     >
                                         <img
@@ -434,7 +400,7 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                 <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
                     Dashboard
                 </div>
-                <a href="#">
+                <a href="front/src/app/admin#">
                     <span className="sr-only">Your profile</span>
                     <img
                         className="h-8 w-8 rounded-full bg-gray-50"

@@ -20,7 +20,7 @@ function NoNFT() {
                         />
                         <h1 className="mb-6 text-3xl font-bold  text-center leading-tight text-black sm:text-[40px] md:text-[50px] lg:text-[42px] xl:text-[50px]">
                             <span className="bg-yellow-gradient-color bg-clip-text  mx-2">
-                                Ohhhh go you don't have your Organizer NFT
+                                Ohhhh go you don&apos;t have your Organizer NFT
                             </span>{' '}
                         </h1>
                         <p className="text-3xl mb-10 max-w-[475px] leading-relaxed text-body">

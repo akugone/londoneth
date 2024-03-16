@@ -14,69 +14,34 @@ import { wagmiContractConfig } from '@/config/wagmiConfig';
 import { useHackathon } from '@/hooks/useHackathon';
 import Image from 'next/image';
 import YellowSun from '@/components/Svg/YellowSun';
-import Tiger from '@/components/Svg/Tiger';
+import AdminMenu from "@/app/admin/admin-menu.";
+import {Address} from "@/types/address";
 
 const navigation = [
     {
-        name: 'Your Donations',
+        name: 'Events',
+        href: '/admin/events',
+        icon: Svg.Calendar,
+        current: false,
+    },
+    {
+        name: 'Donations',
         href: '/admin/donations',
         icon: Svg.Coin,
         current: false,
     },
 ];
-const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-    { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
-];
 
 interface Props {
-    isPending: boolean;
-    error: any;
+    address: Address;
     organization: {
         name: string;
         image: string;
     };
 }
 
-export default function AdminHeader({ isPending, error, organization }: Props) {
+export default function DonationsHeader({ address, organization }: Props) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const pathname = usePathname();
-    const { address } = useAccount();
-    const { hackathonId } = useHackathon();
-
-    if (!address) {
-        return <div>Loading...</div>;
-    }
-
-    const { data, isLoading } = useContractReads({
-        contracts: [
-            {
-                ...wagmiContractConfig,
-                functionName: 'tokenURI',
-                args: [hackathonId],
-            },
-        ],
-    });
-
-    // const tokenURI = data[0].result;
-    // const base64String = tokenURI.split(',')[1];
-    // const jsonString = atob(base64String);
-    // const tokenData = JSON.parse(jsonString);
-
-    // console.log('tokenData', tokenData.image);
-
-    if (error) {
-        return (
-            <main className="lg:pl-72">
-                <div className="p-12">
-                    {error instanceof BaseError
-                        ? error.message
-                        : 'An error occurred'}
-                </div>
-            </main>
-        );
-    }
 
     return (
         <header>
@@ -149,15 +114,6 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                                             <Logo className="h-6 w-auto" />
                                         </Link>
                                     </div>
-                                    {isPending && (
-                                        <div className="flex items-center gap-x-2 text-sm font-semibold leading-6 text-gray-400">
-                                            <Svg.Refresh
-                                                className="h-5 w-5 animate-spin"
-                                                aria-hidden="true"
-                                            />
-                                            Loading...
-                                        </div>
-                                    )}
                                     {organization && (
                                         <Avatar className="h-12 w-12 flex-none rounded-full bg-gray-50">
                                             <AvatarImage
@@ -178,39 +134,7 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                                             className="flex flex-1 flex-col gap-y-7"
                                         >
                                             <li>
-                                                <ul
-                                                    role="list"
-                                                    className="-mx-2 space-y-1"
-                                                >
-                                                    {navigation.map((item) => (
-                                                        <li key={item.name}>
-                                                            <a
-                                                                href={item.href}
-                                                                className={cn(
-                                                                    pathname.includes(
-                                                                        item.href
-                                                                    )
-                                                                        ? 'bg-gray-50 text-primary'
-                                                                        : 'text-gray-700 hover:text-primary hover:bg-gray-50',
-                                                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-                                                                )}
-                                                            >
-                                                                <item.icon
-                                                                    className={cn(
-                                                                        pathname.includes(
-                                                                            item.href
-                                                                        )
-                                                                            ? 'text-primary'
-                                                                            : 'text-gray-400 group-hover:text-primary',
-                                                                        'h-6 w-6 shrink-0'
-                                                                    )}
-                                                                    aria-hidden="true"
-                                                                />
-                                                                {item.name}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                <AdminMenu />
                                             </li>
                                             <li>
                                                 <div className="text-xs font-semibold leading-6 text-gray-400">
@@ -284,79 +208,30 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                             <Logo className="h-6 w-auto" />
                         </Link>
                     </div>
-                    {isPending && (
-                        <div className="flex items-center gap-x-2 text-sm font-semibold leading-6 text-gray-400">
-                            <Svg.Refresh
-                                className="h-5 w-5 animate-spin"
-                                aria-hidden="true"
-                            />
-                            Loading...
-                        </div>
-                    )}
                     <nav className="flex flex-1 flex-col">
                         <ul
                             role="list"
                             className="flex flex-1 flex-col gap-y-7"
                         >
                             <li>
-                                <ul
-                                    role="list"
-                                    className="-mx-2 space-y-1"
-                                >
-                                    {navigation.map((item) => (
-                                        <li key={item.name}>
-                                            <a
-                                                href={item.href}
-                                                className={cn(
-                                                    pathname.includes(item.href)
-                                                        ? 'bg-gray-50 text-primary'
-                                                        : 'text-gray-700 hover:text-primary hover:bg-gray-50',
-                                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-                                                )}
-                                            >
-                                                <item.icon
-                                                    className={cn(
-                                                        pathname.includes(
-                                                            item.href
-                                                        )
-                                                            ? 'text-primary'
-                                                            : 'text-gray-400 group-hover:text-primary',
-                                                        'h-6 w-6 shrink-0'
-                                                    )}
-                                                    aria-hidden="true"
-                                                />
-                                                {item.name}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <AdminMenu />
                             </li>
 
                             <li>
                                 <div className="text-xl mb-4 font-semibold leading-6 text-gray-400">
-                                    You have made 3 Donations
+                                    Your NFT
                                 </div>
                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNzIwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9Ii0yMDAgLTUwIDEwMDAgMTAwMCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI2NC41IDE5MC41YzAtMTMuOCAxMS4yLTI1IDI1LTI1SDU2OGMxMy44IDAgMjUgMTEuMiAyNSAyNXY0OTBjMCAxMy44LTExLjIgMjUtMjUgMjVIMjg5LjVjLTEzLjggMC0yNS0xMS4yLTI1LTI1eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNjUgNjI0YzAtMTMuOCAxMS4yLTI1IDI1LTI1aDU0M2MxMy44IDAgMjUgMTEuMiAyNSAyNXY1Ni41YzAgMTMuOC0xMS4yIDI1LTI1IDI1SDI5MGMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTAgMTkwLjVjMC0xMy44IDExLjItMjUgMjUtMjVoNTQzYzEzLjggMCAyNSAxMS4yIDI1IDI1VjI0N2MwIDEzLjgtMTEuMiAyNS0yNSAyNUgyNWMtMTMuOCAwLTI1LTExLjItMjUtMjV6Ii8+PC9zdmc+PHRleHQgeD0iMzAiIHk9IjY3MCIgc3R5bGU9ImZvbnQ6IDYwcHggc2Fucy1zZXJpZjtmaWxsOiNmZmYiPmV0aGdsb2JhbC5mdW5kPC90ZXh0Pjwvc3ZnPg==" />
                             </li>
+
                             <li>
-                                <div className="text-xl mb-4 font-semibold leading-6 text-gray-400">
-                                    You have 6.8 PoG Token to claim
-                                </div>
-                                <Link
-                                    className="block my-4 bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-md px-10  py-3 text-md"
-                                    target="_blank"
-                                    href="/admin/events"
-                                >
-                                    Claim my token
-                                </Link>
+                                <YellowSun />
                             </li>
-                            <li>
-                                <Tiger />
-                            </li>
+
                             {!!address && (
                                 <li className="-mx-6 mt-auto">
                                     <a
-                                        href="#"
+                                        href="front/src/app/admin#"
                                         className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                                     >
                                         <img
@@ -393,7 +268,7 @@ export default function AdminHeader({ isPending, error, organization }: Props) {
                 <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
                     Dashboard
                 </div>
-                <a href="#">
+                <a href="front/src/app/admin#">
                     <span className="sr-only">Your profile</span>
                     <img
                         className="h-8 w-8 rounded-full bg-gray-50"

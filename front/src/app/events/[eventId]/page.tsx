@@ -3,12 +3,10 @@
 import { useParams } from 'next/navigation';
 import { useSubgraphEvent } from '@/hooks/useSubgraphEvent';
 import { EventImage } from '@/components/event-image';
-import { Button } from '@/components/ui/button';
-import { DonationList } from '@/components/donations-list';
 import DonationForm from '@/components/Form/donationForm';
 import Image from 'next/image';
-import PixelBackground from '@/components/Svg/PixelBackground';
 import WorldCoinLogin from '@/components/Worldcoin/WorldCoinLogin';
+import {DonationGrid} from "@/components/donations-grid";
 
 const activityItems = [
     {
@@ -142,7 +140,7 @@ export default function EventPage() {
                     <h2 className="mx-4 flex-none text-xs text-gray-500">
                         Donations
                     </h2>
-                    <DonationList
+                    <DonationGrid
                         items={activityItems}
                         className="border border-gray-100 rounded-xl"
                     />

@@ -34,7 +34,7 @@ export function useCopyToClipboard(delay = 2000): {
             }, delay);
             return () => clearTimeout(timer);
         }
-    }, [copiedText]);
+    }, [copiedText, delay]);
 
     return { copiedText, copy };
 }

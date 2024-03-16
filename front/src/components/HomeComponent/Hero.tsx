@@ -3,6 +3,7 @@ import Logo from '../logo';
 import Organizer from './Organizer';
 import WorldCoinLogin from '../Worldcoin/WorldCoinLogin';
 import YellowSun from '../Svg/YellowSun';
+import Link from 'next/link';
 
 function Hero() {
     return (
@@ -11,7 +12,7 @@ function Hero() {
             className="bg-primary pt-10 pb-10 lg:pt-16 lg:pb-16"
         >
             <div className="container lg:max-w-[1305px] lg:px-10">
-                <div className="-mx-4 ">
+
                     <div className="w-full px-4 flex flex-col items-center justify-center">
                         <Image
                             src="/images/nouns/hat.png"
@@ -34,10 +35,10 @@ function Hero() {
                             collect swagg or token donations
                         </p>
 
-                        <div className="flex justify-between">
+                        <div className="flex gap-20 justify-between">
                             <YellowSun />
-                            <div className="px-20">
-                                <a
+
+                                <Link
                                     target="_blank"
                                     href="https://github.com/akugone/londoneth"
                                     className=" inline-flex h-[60px] items-center rounded-lg bg-black py-[14px] px-[30px] text-white hover:bg-opacity-90"
@@ -58,13 +59,11 @@ function Hero() {
                                             />
                                         </svg>
                                     </span>
-                                </a>
-                            </div>
+                                </Link>
 
                             <YellowSun />
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     );

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useSubgraphEvents } from '@/hooks/useSubgraphEvents';
 import { EventCard } from '@/components/event-card';
+import { Button } from './ui/button';
 
 interface Props {
     className?: string;
@@ -37,12 +38,13 @@ export const EventsGrid = ({ className }: Props) => {
             </div>
             {data && displayCount < data.length && (
                 <div className="flex justify-center mt-4">
-                    <button
+                    <Button
+                        variant="link"
                         onClick={showMoreEvents}
-                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                        // className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
                     >
                         Show More
-                    </button>
+                    </Button>
                 </div>
             )}
         </>

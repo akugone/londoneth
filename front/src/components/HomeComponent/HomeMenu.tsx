@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { WagmiConnect } from '../wagmi-connect';
 import WorldCoinButton from '../Worldcoin/Button';
 import Logo from '../logo';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 function HomeMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -53,50 +55,51 @@ function HomeMenu() {
                         <nav className="fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center bg-white bg-opacity-95 text-center backdrop-blur-sm lg:static lg:h-auto lg:w-max lg:bg-transparent lg:backdrop-blur-none ">
                             <ul className="items-center space-y-3 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-10">
                                 <li className="menu-item">
-                                    <a
-                                        onClick={() => setIsOpen(false)}
-                                        href="#features"
-                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
-                                    >
-                                        Donations
-                                    </a>
+                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                        <Link
+                                            onClick={() => setIsOpen(false)}
+                                            href="#features"
+                                        >
+                                            Donations
+                                        </Link>
+                                    </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <a
-                                        onClick={() => setIsOpen(false)}
-                                        href="#about"
-                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
-                                    >
-                                        Events
-                                    </a>
+                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                        <Link
+                                            onClick={() => setIsOpen(false)}
+                                            href="#about"
+                                        >
+                                            Events
+                                        </Link>
+                                    </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <a
-                                        onClick={() => setIsOpen(false)}
-                                        href="#work-process"
-                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
-                                    >
-                                        Features
-                                    </a>
+                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                        <Link
+                                            onClick={() => setIsOpen(false)}
+                                            href="#work-process"
+                                        >
+                                            Features
+                                        </Link>
+                                    </Button>
                                 </li>
                                 <li className="menu-item">
-                                    <a
-                                        onClick={() => setIsOpen(false)}
-                                        href="#faq"
-                                        className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7"
-                                    >
-                                        Team
-                                    </a>
+                                    <Button asChild variant="link" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7">
+                                        <Link
+                                            onClick={() => setIsOpen(false)}
+                                            href="#faq"
+                                        >
+                                            Team
+                                        </Link>
+                                    </Button>
                                 </li>
                             </ul>
                         </nav>
                     </div>
 
-                    <div className="mr-[60px] flex items-center justify-end lg:mr-0">
-                        {/*<DynamicWidget />*/}
-                        <button className="rounded-md bg-black py-[6px] px-[4px] text-base font-medium text-black hover:bg-opacity-90">
-                            <WagmiConnect />
-                        </button>
+                    <div className="mr-8 flex items-center justify-end lg:mr-0">
+                        <WagmiConnect />
                     </div>
                 </div>
             </div>

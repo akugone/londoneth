@@ -1,6 +1,5 @@
 "use client"
 
-import {abi} from "@/abis/HackathonID";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -18,9 +17,10 @@ import { Input } from "@/components/ui/input"
 import { Svg } from "./svg"
 import { wagmiContractConfig } from "@/config/wagmiConfig"
 import { useHackathon } from "@/hooks/useHackathon"
-import {useAccount, useConfig, useContractWrite, useWaitForTransaction, useWaitForTransactionReceipt } from 'wagmi';
+import { useContractWrite, useWaitForTransaction } from 'wagmi';
 import ModalCreatedEvent from "@/components/modal-created-event";
-import {useEffect, useState} from "react";
+import { useState} from "react";
+import {Address} from "@/types/address";
 
 const formSchema = z.object({
     title: z.string().min(2, {
@@ -29,12 +29,13 @@ const formSchema = z.object({
 })
 
 export function CreateEventForm() {
-    // const {address} = useAccount()
     const [isOpen, setOpen] = useState(false)
-    const { data: hash, isSuccess, isLoading, writeAsync } = useContractWrite({
+    const { data, isLoading, writeAsync } = useContractWrite({
         ...wagmiContractConfig,
         functionName: 'createEvent',
     });
+
+    const hash = data as Address;
 
     const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransaction({
         hash: hash,
