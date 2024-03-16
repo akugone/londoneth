@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11fdcbb2-420e-4b7f-91b5-b8274743a312" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/admin/events/events-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/admin/events/events-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/create-event-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create-event-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710584976189</updated>
       <workItem from="1710584978045" duration="2658000" />
-      <workItem from="1710597364681" duration="6678000" />
+      <workItem from="1710597364681" duration="6867000" />
     </task>
     <servers />
   </component>
