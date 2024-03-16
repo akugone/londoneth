@@ -6,7 +6,10 @@ import WorldCoinLogin from '../Worldcoin/WorldCoinLogin';
 
 function Donator() {
     return (
-        <div className="ml-5 flex flex-col items-center gap-2 text-center">
+        <div
+            id="donations"
+            className="ml-5 flex flex-col items-center gap-2 text-center"
+        >
             <Image
                 src="/images/nouns/heart.png"
                 width={100}

@@ -1,7 +1,7 @@
 function MainTitle() {
     return (
         <section
-            id="features"
+            id="events"
             className=" relative z-10 pt-[30px]"
         >
             <div className="container">
