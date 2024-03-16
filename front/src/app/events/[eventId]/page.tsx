@@ -129,6 +129,7 @@ export default function EventPage() {
                             </p>
                         </div>
                     </div>
+                    <DonationForm />
                 </main>
 
                 <aside className="w-96 mr-12 flex flex-col gap-4 py-12">

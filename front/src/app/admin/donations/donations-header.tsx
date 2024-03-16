@@ -49,6 +49,27 @@ interface Props {
 export default function DonationsHeader({ address, organization }: Props) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
+    const { data } = useContractReads({
+        contracts: [
+            {
+                ...wagmiContractConfig,
+                functionName: 'tokenURI',
+                args: [BigInt(1)],
+            },
+        ],
+    });
+
+    const [nftData] = data || [];
+
+    const base64String = nftData.result.split(',')[1];
+    const jsonString = atob(base64String);
+    const tokenData = JSON.parse(jsonString);
+
+    console.log('tokenData', tokenData.image);
+    const nftSrc = tokenData.image || '';
+
+    console.log(nftSrc);
+
     const {
         data: hash,
         isLoading,
