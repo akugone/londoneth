@@ -25,6 +25,13 @@ function Donator() {
             {process.env.NEXT_PUBLIC_ACTIVATE_WORLDCOIN === 'true' ? (
                 <>
                     <WorldCoinLogin />
+                    <Link
+                        className="opacity-0"
+                        target="_blank"
+                        href="/admin/donations"
+                    >
+                        -------
+                    </Link>
                 </>
             ) : (
                 <Link
