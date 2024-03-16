@@ -108,7 +108,7 @@ export default function EventPage() {
                         Organizer : {event.name}
                     </h2>
 
-                    <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+                    <div className="my-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
                         <div className="lg:w-full lg:max-w-2xl lg:flex-auto flex flex-col items-start gap-10">
                             <p className="text-xl leading-8 text-gray-600">
                                 <span className="font-medium">
@@ -129,6 +129,9 @@ export default function EventPage() {
                             </p>
                         </div>
                     </div>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        Make a Donation
+                    </h2>
                     <DonationForm />
                 </main>
 
