@@ -1,5 +1,11 @@
 # SWAGGI : Super We All Gonna Give It
 
+Swaggi started at ETHDenver, inspired by seeing a friend struggle to pack too much hackathon swag. We realized the waste wasn't unique—too often, event goodies are discarded or forgotten.
+
+That's where Swaggi steps in. It's a simple, friendly platform that helps event organizers and companies send their extra swag to charities. With SWAGGI (Super We All Gonna Give It), we're turning leftovers into lifelines. Companies get a "Proof Of Give" NFT for their donations, creating a circle of giving and impact. They are then able to share a public page with all the infos about donations.
+
+In short, SWAGGI transforms surplus into support, making sure no swag goes to waste and helping those in need.
+
 https://swaggi.vercel.app/
 
 # Smart Contract
